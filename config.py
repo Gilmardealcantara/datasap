@@ -12,8 +12,8 @@ class Production(Config):
 
 class Development(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + path.join(getcwd(), 'data/database.sqlite')
-    # SQLALCHEMY_DATABASE_URI = "postgresql://gilmar:123456@localhost/gilmar"
+    # SQLALCHEMY_DATABASE_URI = 'sqlite:///' + path.join(getcwd(), 'data/database.sqlite')
+    QLALCHEMY_DATABASE_URI = "postgresql://gilmar:123456@localhost/gilmar"
 
 
 class Testing(Config):
