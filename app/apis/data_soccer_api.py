@@ -9,3 +9,8 @@ blueprint = Blueprint('sap', __name__, url_prefix='/api/sap')
 def list():
     saps = db.session.query(SAP).all()
     return jsonify(data=[dict(c) for c in saps])
+
+@blueprint.route("/data_tables")
+def data_tables():
+    saps = db.session.query(SAP).all()
+    return jsonify(data=[dict(c).values() for c in saps])
