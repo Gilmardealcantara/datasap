@@ -1,3 +1,4 @@
+# https://www.kaggle.com/aljarah/xAPI-Edu-Data
 from app import manager
 from scripts.load_data import LoadData
 from flask_migrate import MigrateCommand

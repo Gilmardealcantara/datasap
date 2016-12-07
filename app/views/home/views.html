@@ -1,0 +1,28 @@
+<!doctype html>
+<meta charset="utf-8">
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<script src="//d3plus.org/js/d3.js"></script>
+<script src="//d3plus.org/js/d3plus.js"></script>
+
+<div id="viz"></div>
+
+<script>
+    // Discussion groups- how many times the student participate on discussion groups (numeric:0-100)'
+    $.get( "/api/sap/graph/1", function( data ) {
+    
+    var visualization = d3plus.viz()
+        .container("#viz")
+        .data(data.data)
+        .type("bar")
+        .id("topic")
+        .x("topic")
+        .y("discussion")
+        .title('Media da Participação dos alunos nos grupos de discurção por curso.')
+        .draw()
+
+    });
+
+
+</script>
