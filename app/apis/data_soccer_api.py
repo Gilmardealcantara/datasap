@@ -5,7 +5,7 @@ from app.models.sap import SAP
 from app import db
 
 
-blueprint = Blueprint('sap', __name__, url_prefix='/api/data_soccer')
+blueprint = Blueprint('sap', __name__, url_prefix='/api/sap')
 
 @blueprint.route("/")
 def country():
