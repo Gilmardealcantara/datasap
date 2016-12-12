@@ -6,7 +6,7 @@ from app import db
 
 class LoadData(Command):
 
-    "Loads elections data"
+    "Loads SAP data"
 
     def run(self):
         data_frame = pandas.read_csv('data/xAPI-Edu-Data.csv')
