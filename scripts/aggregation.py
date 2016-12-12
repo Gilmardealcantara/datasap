@@ -11,7 +11,13 @@ class AggregationData(Command):
         engine = create_engine(flask.config['SQLALCHEMY_DATABASE_URI'])
         connection = engine.connect()
 
-        sql = "DROP TABLE sap_t; CREATE TABLE sap_t(\
+        try:
+            connection.execute('DROP TABLE sap_t');
+        except Exception:
+            pass
+            
+
+        sql = "CREATE TABLE sap_t(\
                 id SERIAL PRIMARY KEY,\
                 Topic   VARCHAR(20),\
                 raisedhands INTEGER,\
