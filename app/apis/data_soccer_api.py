@@ -38,15 +38,7 @@ def graph1():
 @blueprint.route("/graph/2")
 def graph2():
     saps = SAPTopics.query.all()
-
-    data = []
-    for row in [dict(c) for c in saps]:
-        tmp = {}
-        for key in row.keys():
-            tmp[key] = row[key]
-        data += [tmp]   
-
-    return jsonify(data=data)
+    return jsonify(data= [dict(c) for c in saps])
 
 
  
