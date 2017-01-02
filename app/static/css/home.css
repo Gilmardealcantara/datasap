@@ -1,0 +1,18 @@
+nav {
+width:auto;
+margin: -10 auto;
+position:relative;
+width: 100%;
+background-image: url('../img/bck2.jpeg');
+}
+
+section {
+background-image: url('../img/bck2.jpeg');
+}
+
+section h1{
+text-align: center;
+vertical-align: middle;
+line-height: 700px;
+color: white;
+}
