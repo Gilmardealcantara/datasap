@@ -1,3 +1,5 @@
+{% extends 'home/base.html' %}
+{% block content %}
 <!doctype html>
 <meta charset="utf-8">
 
@@ -10,7 +12,7 @@
 
 <script>
     // Discussion groups- how many times the student participate on discussion groups (numeric:0-100)'
-    $.get( "/api/sap/graph/2", function( data ) {
+    $.get("/api/sap/graph/2", function( data ) {
     
     var visualization = d3plus.viz()
         .container("#viz")
@@ -30,3 +32,4 @@
 
 
 </script>
+{% endblock content %}

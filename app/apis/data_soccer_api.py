@@ -5,15 +5,18 @@ from app.models.sap_topics import SAPTopics
 
 blueprint = Blueprint('sap', __name__, url_prefix='/api/sap')
 
+
 @blueprint.route("/")
 def list():
     saps = SAP.query.all()
     return jsonify(data=[dict(c) for c in saps])
 
+
 @blueprint.route("/data_tables")
 def data_tables():
     saps = SAP.query.all()
     return jsonify(data=[dict(c).values() for c in saps])
+
 
 @blueprint.route("/graph/1")
 def graph1():
@@ -29,10 +32,8 @@ def graph1():
     data2 = []
     for topic in data:
         data2 += [{'topic' : topic, 'discussion' :  data[topic][0] / data[topic][1]}]
-        
 
     return jsonify(data=data2)
-
 
 
 @blueprint.route("/graph/2")
@@ -41,4 +42,4 @@ def graph2():
     return jsonify(data= [dict(c) for c in saps])
 
 
- 
+
