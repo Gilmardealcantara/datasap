@@ -11,7 +11,7 @@ class Production(Config):
 
 class Development(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = "postgresql://gilmar:123456@localhost/gilmar"
+    SQLALCHEMY_DATABASE_URI = 'postgres:///datasap'
 
 
 class Testing(Config):
