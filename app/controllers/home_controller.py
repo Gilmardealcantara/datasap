@@ -5,7 +5,7 @@ blueprint = Blueprint('home_controller', __name__, url_prefix='/')
 
 @blueprint.route("/")
 def home():
-    return render_template('home/index.html')
+    return render_template('home/all.html')
 
 @blueprint.route("tables")
 def table():
