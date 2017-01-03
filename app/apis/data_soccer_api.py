@@ -15,7 +15,8 @@ def list():
 @blueprint.route("/data_tables")
 def data_tables():
     saps = SAP.query.all()
-    return jsonify(data=[dict(c).values() for c in saps])
+    return jsonify(data=[dict(c) for c in saps])
+    # return jsonify(data=[dict(c).values() for c in saps])
 
 
 @blueprint.route("/graph/1")
