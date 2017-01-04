@@ -2,7 +2,7 @@
 $.get("/api/sap/graph/2", function( data ) {
 
 var visualization = d3plus.viz()
-    .container("#viz")
+    .container("#bar")
     .data(data.data)
     .type("bar")
     .id("topic")
@@ -12,7 +12,24 @@ var visualization = d3plus.viz()
         "method" : "y",
         "value"  : ["discussion", "raisedhands", "visitedresources", "announcementsview"]
     }])
-    .title('Media da Participação dos alunos nos grupos de discurção por curso.')
+    .title('The average participation rate of students in discursions, raises Hand in Classroon,  visits a course content and views new announcements')
     .draw()
+
+
+var visualization = d3plus.viz()
+    .container("#treemap")
+    .data(data.data)
+    .type("treemap")
+    .id("topic")
+    .x("topic")
+    .size("discussion")
+    .ui([{
+        "method" : "size",
+        "value"  : ["discussion", "raisedhands", "visitedresources", "announcementsview"]
+    }])
+    .title('The average participation rate of students in discursions, raises Hand in Classroon,  visits a course content and views new announcements')
+    .draw()
+
+
 
 });
