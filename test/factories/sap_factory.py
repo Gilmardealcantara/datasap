@@ -8,8 +8,8 @@ class SapFactory(factory.alchemy.SQLAlchemyModelFactory):
     class Meta:
         model = SAP
         sqlalchemy_session = db.session
-    
-    
+
+
     gender = 'ASDASDASDA'
     NationalITy = 'ASDASDASDA'
     PlaceofBirth = 'ASDASDASDA'
