@@ -16,10 +16,8 @@ pip install -r requirements.txt
 ```
 Crie um base de dados chamada 'datasap' no postgress
 
-Execute migrations
+Execute upgrade do banco 
 ```python 
-python manage.py  db init 
-python manage.py  db migrate
 python manage.py  db upgrade
 ```
 
