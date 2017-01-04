@@ -12,14 +12,13 @@ var visualization = d3plus.viz()
         "method" : "y",
         "value"  : ["discussion", "raisedhands", "visitedresources", "announcementsview"]
     }])
-    .title('The average participation rate of students in discursions, raises Hand in Classroon,  visits a course content and views new announcements')
     .draw()
 
 
 var visualization = d3plus.viz()
     .container("#treemap")
     .data(data.data)
-    .type("treemap")
+    .type("tree_map")
     .id("topic")
     .x("topic")
     .size("discussion")
@@ -27,9 +26,19 @@ var visualization = d3plus.viz()
         "method" : "size",
         "value"  : ["discussion", "raisedhands", "visitedresources", "announcementsview"]
     }])
-    .title('The average participation rate of students in discursions, raises Hand in Classroon,  visits a course content and views new announcements')
     .draw()
 
-
+var visualization = d3plus.viz()
+    .container("#bubbles")
+    .data(data.data)
+    .type("bubbles")
+    .id("topic")
+    .x("topic")
+    .size("discussion")
+    .ui([{
+        "method" : "size",
+        "value"  : ["discussion", "raisedhands", "visitedresources", "announcementsview"]
+    }])
+    .draw()
 
 });
