@@ -26,6 +26,7 @@ $(document).ready(function() {
             "dataSrc": "data",
         },
         "scrollX": true,
+        responsive: true,
         "columns": [    
             {
                 render: function(data, type, row, meta){
@@ -112,6 +113,19 @@ $(document).ready(function() {
                     return row[headers['16']]
                 }
             }
-        ]
+        ],
+        "fnRowCallback": function( nRow, aData, iDisplayIndex, iDisplayIndexFull ) {
+            if ( iDisplayIndex%2 == 0 )
+            {
+                $('td', nRow).css('background-color', '#f6dd89');
+            }
+            else
+            {
+                $('td', nRow).css('background-color', '#fff');
+            }
+        }, 
+        initComplete: function () {
+            
+        }
     });
 });
