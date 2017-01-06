@@ -12,6 +12,7 @@ Flask-Script==0.6.7
 Flask-SQLAlchemy==2.1
 Flask-Testing==0.6.1
 Foundations==2.1.0
+gunicorn==19.6.0
 imagesize==0.7.1
 inflection==0.3.1
 ipaddress==1.0.17
