@@ -6,7 +6,7 @@ class Config(object):
 
 
 class Production(Config):
-    pass
+    SQLALCHEMY_DATABASE_URI = getenv('DATABASE_URL', '')
 
 
 class Development(Config):
