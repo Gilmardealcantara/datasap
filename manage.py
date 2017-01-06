@@ -3,14 +3,11 @@ from app import manager
 from scripts.load_data import LoadData
 from scripts.aggregation import AggregationData
 from flask_migrate import MigrateCommand
-import requests
-
-def index(request):
-    r = requests.get('http://httpbin.org/status/418')
-    print r.text
-    return HttpResponse('<pre>' + r.text + '</pre>')
+from flask_script import Server
+from os import getenv
 
 manager.add_command('load', LoadData)
 manager.add_command('agg', AggregationData)
 manager.add_command('db', MigrateCommand)
+manager.add_command('runserver', Server(host='0.0.0.0', port=int(getenv('PORT', 5000))))
 manager.run()
