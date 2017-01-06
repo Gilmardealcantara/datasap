@@ -1,4 +1,6 @@
 # Students' Academic Performance
+from os import getenv
+
 class Config(object):
     DEBUG = False
     TESTING = False
